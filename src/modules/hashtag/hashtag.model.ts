@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types } from 'mongoose';
-import * as mongoosePaginate from 'mongoose-paginate-v2';
+const mongoosePaginate = require('mongoose-paginate-v2');
 import { IBaseEntity } from '../../interfaces/base-entity.interface';
 import { CreatedByType } from '../../modules/crossword/crossword.model';
 

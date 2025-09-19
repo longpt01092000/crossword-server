@@ -1,7 +1,5 @@
 import { NestFactory } from '@nestjs/core';
 import { ConfigService } from '@nestjs/config';
-import { join } from 'path';
-import * as express from 'express';
 
 import { AppModule } from './app.module';
 import { setupSwagger } from './infras/swagger.infras';
@@ -28,8 +26,6 @@ async function bootstrap() {
     new ExceptionInterceptor(),
     new ResponseInterceptor(),
   );
-
-  app.use('/uploads', express.static(join(__dirname, '..', 'uploads')));
 
   const port = process.env.PORT || configService.get<number>('port') || 3000;
   await app.listen(port);

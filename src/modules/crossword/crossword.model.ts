@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types } from 'mongoose';
-import * as mongoosePaginate from 'mongoose-paginate-v2';
+const mongoosePaginate = require('mongoose-paginate-v2');
 import { IBaseEntity } from '../../interfaces/base-entity.interface';
 
 export type CrosswordDocument = Crossword & Document;
@@ -94,7 +94,6 @@ export class Crossword implements ICrossword {
 
   @Prop({ default: false })
   isSyncGenPuzzles: boolean;
-
   _id: Types.ObjectId;
   createdAt: Date;
   updatedAt: Date;
