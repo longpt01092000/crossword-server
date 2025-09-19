@@ -1,3 +1,4 @@
+import { DifficultyLevel } from '../crossword.model';
 import {
   ValidateOptionalBoolean,
   ValidateOptionalMongoIdArray,
@@ -8,7 +9,6 @@ import {
   ValidateRequiredObjectArray,
   ValidateRequiredString,
 } from '../../../common/decorators/validation.decorator';
-import { DifficultyLevel } from '../crossword.model';
 
 export enum WordDirection {
   Vertical = 'V',

@@ -2,15 +2,15 @@ import { NestFactory } from '@nestjs/core';
 import { ConfigService } from '@nestjs/config';
 import { ExpressAdapter } from '@nestjs/platform-express';
 import { ValidationPipe } from '@nestjs/common';
-import express from 'express';
-import { Request, Response } from 'express';
+import { Request, Response, Application } from 'express';
+const express = require('express');
 
 import { AppModule } from './app.module';
 import { setupSwagger } from './infras/swagger.infras';
 import { ExceptionInterceptor } from './interceptors/exception.interceptor';
 import { ResponseInterceptor } from './interceptors/response.interceptor';
 
-let cachedApp: express.Application | undefined;
+let cachedApp: Application | undefined;
 
 async function createNestApp() {
   if (cachedApp) return cachedApp;

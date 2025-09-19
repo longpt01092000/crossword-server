@@ -6,11 +6,11 @@ import {
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 
-import { BaseService } from '../../core/base-service.core';
-import { generateSlug } from '../../utils/function.util';
 import { IHashtag, Hashtag, HashtagDocument } from './hashtag.model';
 import { CreateHashtagDto } from './dto/create-hashtag.dto';
 import { UpdateHashtagDto } from './dto/update-hashtag.dto';
+import { BaseService } from '../../core/base-service.core';
+import { generateSlug } from '../../utils/function.util';
 
 @Injectable()
 export class HashtagService extends BaseService<HashtagDocument, IHashtag> {

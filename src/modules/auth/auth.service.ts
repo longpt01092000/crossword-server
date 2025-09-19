@@ -4,9 +4,9 @@ import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcryptjs';
 import { Model } from 'mongoose';
 
-import { BaseService } from '../../core/base-service.core';
 import { IUser, User, UserDocument } from './auth.model';
 import { LoginDto } from './dto/login.dto';
+import { BaseService } from '../../core/base-service.core';
 
 @Injectable()
 export class AuthService extends BaseService<UserDocument, IUser> {

@@ -1,8 +1,8 @@
 import { connect, disconnect, Mongoose } from 'mongoose';
 import * as dotenv from 'dotenv';
 dotenv.config();
-import { CrosswordSchema } from '../modules/crossword/crossword.model';
 import { genPuzzles } from './helpers/crossword-generator';
+import { CrosswordSchema } from '../modules/crossword/crossword.model';
 
 const MONGODB_URI =
   process.env.MONGODB_URI || 'mongodb://localhost:27017/crossword-server';

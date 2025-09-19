@@ -2,10 +2,6 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model, Types } from 'mongoose';
 
-import { BaseService } from '../../core/base-service.core';
-import { HashtagService } from '../hashtag/hashtag.service';
-import { OpenAIService } from '../../services/openai.service';
-import { UserAuth } from '../../interfaces/auth.interface';
 import {
   ICrossword,
   Crossword,
@@ -16,7 +12,11 @@ import {
 import { CreateCrosswordDto } from './dto/create-crossword.dto';
 import { UpdateCrosswordDto } from './dto/update-crossword.dto';
 import { GenerateCrosswordDto } from './dto/generate-crossword.dto';
+import { HashtagService } from '../hashtag/hashtag.service';
 import { generateSlug } from '../../utils/function.util';
+import { BaseService } from '../../core/base-service.core';
+import { OpenAIService } from '../../services/openai.service';
+import { UserAuth } from '../../interfaces/auth.interface';
 
 @Injectable()
 export class CrosswordService extends BaseService<

@@ -22,6 +22,7 @@ import { CreateHashtagDto } from './dto/create-hashtag.dto';
 import { UpdateHashtagDto } from './dto/update-hashtag.dto';
 import { HashtagResponseDto } from './model/hashtag.model';
 import { AuthGuard, Roles } from '../auth/auth.guard';
+import { UserRole } from '../auth/auth.model';
 import {
   parseSort,
   PlainToInstance,
@@ -29,7 +30,6 @@ import {
 } from '../../utils/function.util';
 import { PaginationQueryDto } from '../../common/dto/pagination-query.dto';
 import { PaginationResult } from '../../interfaces/pagination-result.interface';
-import { UserRole } from '../auth/auth.model';
 
 @ApiTags('hashtags')
 @Controller('hashtags')
