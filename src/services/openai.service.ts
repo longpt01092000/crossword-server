@@ -30,8 +30,6 @@ export class OpenAIService {
     this.client = new OpenAI({ apiKey });
     this.defaultModel =
       this.configService.get<string>('openai.model') || 'gpt-4.1-mini';
-
-    console.log(this.defaultModel);
   }
 
   async generateResponse(

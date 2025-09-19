@@ -1,14 +1,23 @@
 import { NestFactory } from '@nestjs/core';
 import { ConfigService } from '@nestjs/config';
+import { ExpressAdapter } from '@nestjs/platform-express';
+import { ValidationPipe } from '@nestjs/common';
+import * as express from 'express';
+import { Request, Response } from 'express';
 
 import { AppModule } from './app.module';
 import { setupSwagger } from './infras/swagger.infras';
 import { ExceptionInterceptor } from './interceptors/exception.interceptor';
 import { ResponseInterceptor } from './interceptors/response.interceptor';
-import { ValidationPipe } from '@nestjs/common';
 
-async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+let cachedApp: express.Application | undefined;
+
+async function createNestApp() {
+  if (cachedApp) return cachedApp;
+
+  const expressApp = express();
+  const adapter = new ExpressAdapter(expressApp);
+  const app = await NestFactory.create(AppModule, adapter);
   const configService = app.get(ConfigService);
 
   setupSwagger(app, configService);
@@ -27,7 +36,27 @@ async function bootstrap() {
     new ResponseInterceptor(),
   );
 
-  const port = process.env.PORT || configService.get<number>('port') || 3000;
-  await app.listen(port);
+  await app.init();
+  cachedApp = expressApp;
+  return expressApp;
 }
-bootstrap();
+
+// For Vercel deployment
+export default async function handler(req: Request, res: Response) {
+  const app = await createNestApp();
+  return app(req, res);
+}
+
+// For local development
+async function bootstrap() {
+  const app = await createNestApp();
+  const port = process.env.PORT || 3000;
+  app.listen(port, () => {
+    console.log(`Application is running on: http://localhost:${port}`);
+  });
+}
+
+// Only run bootstrap in development
+if (process.env.NODE_ENV !== 'production') {
+  bootstrap();
+}
