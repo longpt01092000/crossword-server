@@ -6,10 +6,10 @@ import {
 } from '@nestjs/common';
 import { ApiBody, ApiConsumes, ApiOperation } from '@nestjs/swagger';
 import { ConfigService } from '@nestjs/config';
-import { UploadDiskInterceptor } from '@interceptors/upload-disk.interceptor';
-import { UploadS3Interceptor } from '@interceptors/upload-s3.interceptor';
-import { MulterS3File } from '@interfaces/s3-file.interface';
-import { PlainToInstance } from '@utils/function.util';
+import { UploadDiskInterceptor } from '../../interceptors/upload-disk.interceptor';
+import { UploadS3Interceptor } from '../../interceptors/upload-s3.interceptor';
+import { MulterS3File } from '../../interfaces/s3-file.interface';
+import { PlainToInstance } from '../../utils/function.util';
 import { UploadService } from './upload.service';
 import { FileUploadType } from './upload.model';
 import { FileUploadResponseDto } from './model/upload.model';

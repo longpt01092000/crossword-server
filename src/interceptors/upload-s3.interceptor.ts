@@ -13,13 +13,13 @@ import * as multerS3 from 'multer-s3';
 import * as path from 'path';
 import * as crypto from 'crypto';
 
-import { FileFilterByType } from '@utils/file-filter.util';
+import { FileFilterByType } from '../utils/file-filter.util';
 import {
   FILE_SIZE_LIMIT,
   MAX_FILE_SIZE,
   S3_ACL,
   UploadFileType,
-} from '@config/constant';
+} from '../config/constant';
 import * as dotenv from 'dotenv';
 dotenv.config();
 

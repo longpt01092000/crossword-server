@@ -5,7 +5,7 @@ import {
   ALLOW_MIME_TYPE,
   ALLOW_EXTENSION,
   UploadFileType,
-} from '@config/constant';
+} from '../config/constant';
 
 export function FileFilterByType(type: UploadFileType, allowNull = false) {
   return (

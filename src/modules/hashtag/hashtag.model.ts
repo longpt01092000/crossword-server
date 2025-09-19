@@ -1,8 +1,8 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types } from 'mongoose';
 import * as mongoosePaginate from 'mongoose-paginate-v2';
-import { IBaseEntity } from '@interfaces/base-entity.interface';
-import { CreatedByType } from '@modules/crossword/crossword.model';
+import { IBaseEntity } from '../../interfaces/base-entity.interface';
+import { CreatedByType } from '../../modules/crossword/crossword.model';
 
 export type HashtagDocument = Hashtag & Document;
 

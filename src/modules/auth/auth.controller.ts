@@ -12,7 +12,7 @@ import { LoginDto } from './dto/login.dto';
 import { AuthGuard } from './auth.guard';
 import { LoginResponseDto } from './model/login.model';
 import { UserResponseDto } from './model/user.model';
-import { AuthRequest, UserAuth } from '@interfaces/auth.interface';
+import { AuthRequest, UserAuth } from '../../interfaces/auth.interface';
 
 @ApiTags('auth')
 @Controller('auth')

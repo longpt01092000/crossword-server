@@ -10,7 +10,7 @@ import { Reflector } from '@nestjs/core';
 import { JwtService } from '@nestjs/jwt';
 
 import { UserRole } from './auth.model';
-import { AuthRequest, UserAuth } from '@interfaces/auth.interface';
+import { AuthRequest, UserAuth } from '../../interfaces/auth.interface';
 
 export const ROLES_KEY = 'roles';
 export const Roles = (...roles: UserRole[]) => SetMetadata(ROLES_KEY, roles);

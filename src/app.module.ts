@@ -3,15 +3,15 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { JwtModule } from '@nestjs/jwt';
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
-import configuration from '@config/config';
 import { APP_GUARD } from '@nestjs/core';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UploadModule } from '@modules/uploads/upload.module';
-import { AuthModule } from '@modules/auth/auth.module';
-import { HashtagModule } from '@modules/hashtag/hashtag.module';
-import { CrosswordModule } from '@modules/crossword/crossword.module';
+import { UploadModule } from './modules/uploads/upload.module';
+import { AuthModule } from './modules/auth/auth.module';
+import { HashtagModule } from './modules/hashtag/hashtag.module';
+import { CrosswordModule } from './modules/crossword/crossword.module';
+import configuration from './config/config';
 
 @Module({
   imports: [

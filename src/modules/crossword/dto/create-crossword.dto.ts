@@ -7,7 +7,7 @@ import {
   ValidateRequiredNumber,
   ValidateRequiredObjectArray,
   ValidateRequiredString,
-} from '@common/decorators/validation.decorator';
+} from '../../../common/decorators/validation.decorator';
 import { DifficultyLevel } from '../crossword.model';
 
 export enum WordDirection {

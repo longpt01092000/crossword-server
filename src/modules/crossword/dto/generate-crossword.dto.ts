@@ -2,7 +2,7 @@ import {
   ValidateRequiredString,
   ValidateRequiredStringArray,
   ValidateRequiredNumber,
-} from '@common/decorators/validation.decorator';
+} from '../../../common/decorators/validation.decorator';
 
 export class GenerateCrosswordDto {
   @ValidateRequiredString('Category name', 'Animals')

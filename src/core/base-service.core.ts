@@ -6,8 +6,8 @@ import {
   UpdateResult,
   DeleteResult,
 } from 'mongoose';
-import { IBaseEntity } from '@interfaces/base-entity.interface';
-import { PaginationResult } from '@interfaces/pagination-result.interface';
+import { IBaseEntity } from '../interfaces/base-entity.interface';
+import { PaginationResult } from '../interfaces/pagination-result.interface';
 
 export interface FindOptions {
   populate?: string | string[];

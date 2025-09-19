@@ -4,9 +4,9 @@ import { join } from 'path';
 import * as express from 'express';
 
 import { AppModule } from './app.module';
-import { setupSwagger } from '@infras/swagger.infras';
-import { ExceptionInterceptor } from '@interceptors/exception.interceptor';
-import { ResponseInterceptor } from '@interceptors/response.interceptor';
+import { setupSwagger } from './infras/swagger.infras';
+import { ExceptionInterceptor } from './interceptors/exception.interceptor';
+import { ResponseInterceptor } from './interceptors/response.interceptor';
 import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {

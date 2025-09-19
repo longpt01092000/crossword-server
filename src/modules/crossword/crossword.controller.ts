@@ -33,10 +33,10 @@ import {
   parseSort,
   PlainToInstance,
   PlainToInstanceArray,
-} from '@utils/function.util';
-import { PaginationQueryDto } from '@common/dto/pagination-query.dto';
-import { PaginationResult } from '@interfaces/pagination-result.interface';
-import { AuthRequest } from '@interfaces/auth.interface';
+} from '../../utils/function.util';
+import { PaginationQueryDto } from '../../common/dto/pagination-query.dto';
+import { PaginationResult } from '../../interfaces/pagination-result.interface';
+import { AuthRequest } from '../../interfaces/auth.interface';
 
 @ApiTags('crosswords')
 @Controller('crosswords')

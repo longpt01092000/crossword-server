@@ -7,7 +7,7 @@ import {
   ValidateOptionalNumber,
   ValidateOptionalObjectArray,
   ValidateOptionalString,
-} from '@common/decorators/validation.decorator';
+} from '../../../common/decorators/validation.decorator';
 
 export class UpdateCrosswordDto {
   @ValidateOptionalString('Title of the crossword', 'Technology Crossword')

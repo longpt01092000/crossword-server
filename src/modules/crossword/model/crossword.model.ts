@@ -1,4 +1,5 @@
-import { HashtagResponseDto } from '@modules/hashtag/model/hashtag.model';
+import { DifficultyLevel } from '../crossword.model';
+import { HashtagResponseDto } from '../../hashtag/model/hashtag.model';
 import {
   ExposeBoolean,
   ExposeDate,
@@ -7,8 +8,7 @@ import {
   ExposeNumber,
   ExposeObjectArray,
   ExposeString,
-} from '@common/decorators/expose.decorator';
-import { DifficultyLevel } from '../crossword.model';
+} from '../../../common/decorators/expose.decorator';
 
 export class WordResponseDto {
   @ExposeString('The actual word in the crossword', 'HELLO')

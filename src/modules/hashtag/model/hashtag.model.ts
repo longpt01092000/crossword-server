@@ -3,7 +3,7 @@ import {
   ExposeId,
   ExposeNumber,
   ExposeString,
-} from '@common/decorators/expose.decorator';
+} from '../../../common/decorators/expose.decorator';
 
 export class HashtagResponseDto {
   @ExposeId('MongoDB ObjectId of the hashtag', '507f1f77bcf86cd799439011')

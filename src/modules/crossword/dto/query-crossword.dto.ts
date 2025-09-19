@@ -1,8 +1,8 @@
 import {
   ValidateOptionalMongoId,
   ValidateOptionalString,
-} from '@common/decorators/validation.decorator';
-import { PaginationQueryDto } from '@common/dto/pagination-query.dto';
+} from '../../../common/decorators/validation.decorator';
+import { PaginationQueryDto } from '../../../common/dto/pagination-query.dto';
 
 export class QueryCrosswordDto extends PaginationQueryDto {
   @ValidateOptionalMongoId('hashtagId must be a valid MongoDB ObjectId')

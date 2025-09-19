@@ -1,4 +1,7 @@
-import { ErrorResponse, SuccessResponse } from '@interfaces/response.interface';
+import {
+  ErrorResponse,
+  SuccessResponse,
+} from '../interfaces/response.interface';
 
 export class ResponseUtil {
   static success<T>(

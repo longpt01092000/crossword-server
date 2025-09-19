@@ -11,8 +11,8 @@ import {
   DEFAULT_S3_CONTENT_TYPE,
   S3_ACL,
   S3_CONTENT_DISPOSITION,
-} from '@config/constant';
-import { generateFileKey } from '@utils/function.util';
+} from '../config/constant';
+import { generateFileKey } from '../utils/function.util';
 
 @Injectable()
 export class S3Service {

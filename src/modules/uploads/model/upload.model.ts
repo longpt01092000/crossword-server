@@ -4,7 +4,7 @@ import {
   ExposeEnum,
   ExposeId,
   ExposeString,
-} from '@common/decorators/expose.decorator';
+} from '../../../common/decorators/expose.decorator';
 
 export class FileUploadResponseDto {
   @ExposeString(

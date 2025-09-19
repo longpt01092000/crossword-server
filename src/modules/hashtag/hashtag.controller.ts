@@ -26,10 +26,10 @@ import {
   parseSort,
   PlainToInstance,
   PlainToInstanceArray,
-} from '@utils/function.util';
-import { PaginationQueryDto } from '@common/dto/pagination-query.dto';
-import { PaginationResult } from '@interfaces/pagination-result.interface';
-import { UserRole } from '@modules/auth/auth.model';
+} from '../../utils/function.util';
+import { PaginationQueryDto } from '../../common/dto/pagination-query.dto';
+import { PaginationResult } from '../../interfaces/pagination-result.interface';
+import { UserRole } from '../auth/auth.model';
 
 @ApiTags('hashtags')
 @Controller('hashtags')

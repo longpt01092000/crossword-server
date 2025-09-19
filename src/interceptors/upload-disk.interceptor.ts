@@ -13,12 +13,12 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as crypto from 'crypto';
 
-import { FileFilterByType } from '@utils/file-filter.util';
+import { FileFilterByType } from '../utils/file-filter.util';
 import {
   FILE_SIZE_LIMIT,
   MAX_FILE_SIZE,
   UploadFileType,
-} from '@config/constant';
+} from '../config/constant';
 
 const uploadFolder = path.resolve(__dirname, '..', '..', 'uploads');
 

@@ -2,7 +2,7 @@ import {
   ValidateOptionalBoolean,
   ValidateOptionalString,
   ValidateRequiredString,
-} from '@common/decorators/validation.decorator';
+} from '../../../common/decorators/validation.decorator';
 
 export class CreateHashtagDto {
   @ValidateRequiredString(
